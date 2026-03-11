@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class ex4 {
+    public static void main(String[] args) {
+        // Entrar com a nota 1 e a nota 2 e o programa
+        // exibe na tela a média. Se a média for menor que 50 imprimir
+        // "Reprovado", caso contrário imprimir "Aprovado"
+
+        double n1, n2, media, rec;
+
+        System.out.println("Insira as notas separadas por espaço: ");
+
+        Scanner in = new Scanner(System.in);
+        n1 = in.nextDouble();
+        n2 = in.nextDouble();
+
+        media = (n1 + n2) / 2;
+
+        System.out.println("Média: " + media);
+
+        if (media < 50) {
+            System.out.println("Insira a nota da recuperação: ");
+            rec = in.nextDouble();
+
+            media = (media + rec) / 2;
+
+            if (media < 50)
+                System.out.println("Reprovado");
+            else
+                System.out.println("Aprovado");
+        } else {
+            System.out.println("Aprovado");
+        }
+
+        in.close();
+    }
+}
