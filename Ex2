@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class ex2 {
+    public static void main(String[] args) throws Exception {
+        // Usuário entra com dois números inteiros
+        // programa indica qual é o maior
+        
+        System.out.println("Digite dois números inteiros separados por espaço: ");
+
+        Scanner in = new Scanner (System.in);
+        int n1 = in.nextInt();
+        int n2 = in.nextInt();
+        in.close();
+
+        if (n1 > n2) {
+            System.out.println(n1 + "È maior que " + n2);
+        }else if (n1 < n2) {
+            System.out.println(n2 + "é maior que" + n1);    
+        }else{
+            System.out.println("Os numeros digitados são iguais. ");
+        }
+
+    }
+}
