@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ex1 {
+    public static void main(String[] args) {
+
+        // Receba um número real e caso ele seja positivo imprima
+        // sua raiz quadrada, caso contrário imprima a mensagem: "Valor Inválido"
+
+        System.out.println("Digite um numero real");
+
+        Scanner in = new Scanner(System.in);
+        double n = in.nextDouble();
+        in.close();
+
+        // Operadores de comparação: >, <, >=, <=, == e !=.
+        if (n < 0) {
+            System.out.println("Valor inválido");
+        } else {
+            System.out.println("A raiz quadrada de " + n + " é igual a " + Math.sqrt(n));
+        }
+    }
+}
